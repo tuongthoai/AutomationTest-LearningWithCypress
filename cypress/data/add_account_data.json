@@ -1,0 +1,95 @@
+[
+  {
+    "description": "Create an account with all valid input fields.",
+    "data": {
+      "Họ tên": "Thoại",
+      "Email": "abc@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "success"
+  },
+  {
+    "description": "Create an account with an empty full name.",
+    "data": { "Họ tên": "", "Email": "abc@gmail.com", "Vai trò": "Người dùng" },
+    "expectedResult": "failure",
+    "failureType": "validation"
+  },
+  {
+    "description": "Create an account with a length 101 username.",
+    "data": {
+      "Họ tên": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "Email": "abc@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "failure",
+    "failureType": "validation"
+  },
+  {
+    "description": "Create an account with invalid email.",
+    "data": { "Họ tên": "abc", "Email": "@gmailcom", "Vai trò": "Người dùng" },
+    "expectedResult": "failure",
+    "failureDetail": "Invalid email format: missing characters before '@' or incorrect domain format.",
+    "checkPopup": true
+  },
+  {
+    "description": "Create an account with a length 101 email.",
+    "data": {
+      "Họ tên": "abc",
+      "Email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "failure",
+    "failureDetail": "Email exceeds the maximum allowed length of 100 characters.",
+    "checkPopup": true
+  },
+  {
+    "description": "Create an account with an empty email.",
+    "data": { "Họ tên": "abc", "Email": "", "Vai trò": "Người dùng" },
+    "expectedResult": "failure",
+    "failureType": "validation",
+    "failureDetail": "Email field is empty.",
+    "checkPopup": true
+  },
+  {
+    "description": "Create an account with an empty role.",
+    "data": { "Họ tên": "abc", "Email": "abc@gmail.com", "Vai trò": "Trống" },
+    "expectedResult": "failure",
+    "failureType": "validation"
+  },
+  {
+    "description": "Create an account with a length 2 username.",
+    "data": {
+      "Họ tên": "aa",
+      "Email": "abc@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "success"
+  },
+  {
+    "description": "Create an account with a length 1 username.",
+    "data": {
+      "Họ tên": "a",
+      "Email": "abc@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "success"
+  },
+  {
+    "description": "Create an account with a length 100 username.",
+    "data": {
+      "Họ tên": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "Email": "abc@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "success"
+  },
+  {
+    "description": "Create an account with a length 99 email.",
+    "data": {
+      "Họ tên": "abc",
+      "Email": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@gmail.com",
+      "Vai trò": "Người dùng"
+    },
+    "expectedResult": "success"
+  }
+]

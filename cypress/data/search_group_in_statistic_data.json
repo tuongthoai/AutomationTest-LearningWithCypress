@@ -1,0 +1,172 @@
+[
+    {
+        "TestCaseID": "TC-T-026",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data and last active is false.",
+        "FormData": {
+            "GroupTypeName": "Group1",
+            "Status": "Active",
+            "LastActive": false
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Failure message shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-027",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with empty group name.",
+        "FormData": {
+            "GroupTypeName": "",
+            "Status": "Active",
+            "LastActive": false,
+            "StartDate": "01/06/2024",
+            "EndDate": "30/06/2024"
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Failure message shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-028",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with invalid status.",
+        "FormData": {
+            "GroupTypeName": "Group2",
+            "Status": "Invalid",
+            "LastActive": false
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Failure message shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-029",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data and last active is true.",
+        "FormData": {
+            "GroupTypeName": "Group3",
+            "Status": "Active",
+            "LastActive": true,
+            "StartDate": "01/01/2024",
+            "EndDate": "20/01/2024"
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Result list shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-030",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data, last active is false, and status is 'Locked'.",
+        "FormData": {
+            "GroupTypeName": "Group4",
+            "Status": "Locked",
+            "LastActive": false
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Result list shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-031",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data, last active is true, and status is 'Expired' on the same day.",
+        "FormData": {
+            "GroupTypeName": "Group5",
+            "Status": "Expired",
+            "LastActive": true,
+            "StartDate": "01/08/2024",
+            "EndDate": "01/08/2024"
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Result list shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-032",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data and last active is true and 10 days duration.",
+        "FormData": {
+            "GroupTypeName": "Group8",
+            "Status": "Active",
+            "LastActive": true,
+            "StartDate": "10/08/2024",
+            "EndDate": "20/08/2024"
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Result list shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-033",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data, last active is true, and 20 days duration.",
+        "FormData": {
+            "GroupTypeName": "Group9",
+            "Status": "Active",
+            "LastActive": true,
+            "StartDate": "01/06/2024",
+            "EndDate": "21/06/2024"
+        },
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Result list shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-034",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data, last active is true, and 365 days duration.",
+        "FormData": {
+            "GroupTypeName": "Group14",
+            "Status": "Active",
+            "LastActive": true,
+            "StartDate": "01/01/2024",
+            "EndDate": "31/12/2024"
+        },
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Result list shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-035",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data and start date greater than end date.",
+        "FormData": {
+            "GroupTypeName": "Group1",
+            "Status": "Active",
+            "LastActive": true,
+            "StartDate": "22/08/2024",
+            "EndDate": "21/08/2024"
+        },
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Failure message shown"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-036",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Search statistic group with valid data and invalid date.",
+        "FormData": {
+            "GroupTypeName": "Group1",
+            "Status": "Active",
+            "LastActive": true,
+            "StartDate": "20/02/2024",
+            "EndDate": "30/02/2024"
+        },
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Failure message shown"
+        }
+    }
+]

@@ -1,0 +1,198 @@
+[
+    {
+        "TestCaseID": "TC-T-012",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Validate that the form shows an error when the group type name is empty.",
+        "GroupTypeName": "",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Tên loại nhóm không được rỗng"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-013",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Verify that the form successfully submits with a single-character group type name.",
+        "GroupTypeName": "a",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-014",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Check that the form submits successfully with a two-character group type name.",
+        "GroupTypeName": "aa",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-015",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Ensure the form handles and submits a group type name with exactly 50 characters.",
+        "GroupTypeName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-016",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Confirm that the form trims and submits a group type name with more than 50 characters.",
+        "GroupTypeName": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-017",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Verify that the form submits successfully with valid inputs.",
+        "GroupTypeName": "permit1",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-018",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Ensure the form submits successfully when the description is left empty.",
+        "GroupTypeName": "permit2",
+        "Description": "",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-019",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Verify that the form submits successfully with a zero-byte image.",
+        "GroupTypeName": "permit3",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-020",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Check that the form handles and submits with a valid image of 0.5MB.",
+        "GroupTypeName": "permit4",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 235138.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-021",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Verify successful submission with a valid image of 1.0MB.",
+        "GroupTypeName": "permit5",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshots\\Screenshot 2024-05-24 161035.png",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Success",
+            "Message": "Thêm loại nhóm thành công"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-022",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Ensure the form shows an error when submitting an invalid image of 1.5MB.",
+        "GroupTypeName": "permit6",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\20240802_103118.jpeg",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Vui lòng chọn tập tin có dung lượng nhỏ hơn"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-023",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Validate error handling when a non-supported file type is used for the icon.",
+        "GroupTypeName": "permit7",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Desktop\\MapReducePaper.pdf",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Vui lòng chọn tập tin ảnh có 1 trong 3 định dạng: .png, .jpeg, .jpg!"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-024",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Ensure the form shows an error when the icon file has an incorrect extension.",
+        "GroupTypeName": "permit8",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Desktop\\MWG-WorkNote\\Workflow Representation - Copy.pptx.jpeg",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Vui lòng chọn tập tin ảnh có 1 trong 3 định dạng: .png, .jpeg, .jpg!"
+        }
+    },
+    {
+        "TestCaseID": "TC-T-025",
+        "RequirementID": "TR-T-002",
+        "Purpose": "Check error handling when the icon file is in an unsupported format like HEIC.",
+        "GroupTypeName": "permit9",
+        "Description": "hello",
+        "Icon": "C:\\Users\\ADMIN\\Pictures\\Screenshot 2024-06-04 224923.heic",
+        "ApplicationPermission": "Quyền gửi file",
+        "Category": "Functionality",
+        "ExpectedResult": {
+            "State": "Error",
+            "Message": "Vui lòng chọn tập tin ảnh có 1 trong 3 định dạng: .png, .jpeg, .jpg!"
+        }
+    }
+]
